@@ -1,6 +1,10 @@
-# SecureWeb
+Install Xampp to run php files
 
-After running xampp go to "localhost/phpmyadmin"
+Clone the repo inside htdocs folder of xampp
+
+After installing and running xampp go to "localhost/phpmyadmin"
+
+
 
 Here create a new database named "project"
 
@@ -8,4 +12,4 @@ Inside this database go to the option of import and import the file named "secur
 
 Now open "localhost/`foldername`/home.php"
 
-
+Surf the website 

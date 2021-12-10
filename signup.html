@@ -1,0 +1,133 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<style type="text/css">
+	body{
+			background:linear-gradient(to right, #de6262 0%, #ffb88c 100%);
+		}
+		#signup{
+		width:450px;
+		background:white;
+		height:95vh;
+		align:center;
+		border-radius:25px;
+		color:black;
+		margin:2vh auto;
+		}
+		.sign_up{
+		padding-top:1px;
+		font-weight:bold;
+		letter-spacing:2px;
+		color:black;
+		font-family:sans-serif;
+		}
+		.content{
+		margin-left:10px;
+		text-decoration:none;
+		letter-spacing:2px;
+		}
+		input{
+		background:white;
+		width:95%;
+		border:none;
+		color:black;
+		border-bottom:2px grey solid;
+		}
+		input[type="submit"]{
+		margin-top:20px;
+		margin-left:18%;
+		width:60%;
+		cursor:pointer;
+		}
+		p{
+		margin-bottom:30px;
+		}
+		#email{
+		margin-right:10px;
+		}
+		#newPassword{
+		color:red;
+		font-weight:bolder;
+		position:relative;
+		margin-top:-55px;
+		opacity:0;
+		}
+		#emailText{
+		color:red;
+		font-weight:bold;
+		position:relative;
+		margin-top:-430px;
+		letter-spacing:0px;
+		opacity:0;
+		}
+		input:focus, textarea:focus, select:focus{
+        outline: none;
+		}
+		.alert{
+		margin:5px 10px 0 0;
+		text-align:center;
+		}
+	</style>
+</head>
+<body>
+
+<form id="form" method="Post" action="form.php" >
+	<div id="signup">
+		<div style="text-align:center">
+			<p class="sign_up"><h2>Sign Up </h2></p>
+			</div>
+			<div class="content">
+
+			<input id="name" placeholder="Name" name="Name" pattern="^[a-zA-Z\s]+$" required>
+			<p>Name</p>
+			<input type="email" id="email" placeholder="name@example.com" name="email"
+			pattern = "^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" required>
+			<p>Email <i id="emailIcon" style="color:red;opacity:0;" class="fa fa-info-circle" aria-hidden="true"></i></p>
+
+			<input id="password" type="password" placeholder="Password" required name="Password">
+			<p>Password <i id="passwordIcon" style="color:red;opacity:0" class="fa fa-info-circle" aria-hidden="true"></i></p> 
+
+			<input id="confirmPassword" type="password" placeholder="Retype the Password" required>
+			<p>Confirm Password </p>
+
+			<p id="newPassword">Please enter a password</p>
+
+			<!--<p style="margin-top:15px;">Remember Me <input style= "margin-top:-16px;margin-left:-3%;" type="checkbox"></p>-->
+
+			<input type="submit" value="Register" class="btn btn-primary" onclick="check()">
+
+			<p class="error">
+			</p>
+			<span id="exist"></span>
+			<div class="Signup">
+		  <p style="font-size:16px" align="center">Already Registered ? <a href="login.php">Login</a> here</p>
+		  </div>
+		</div>
+	</div>
+</form>
+	<script type="text/javascript">
+	function check(){
+		var i = $("#password").val();
+		var j = $("#confirmPassword").val();
+		if(i=="" && j==""){
+			$(".error").html('<div class="alert alert-danger" role="alert"><b>Passwords may be empty</b></div>');
+			$("#form").submit(function(e){
+                e.preventDefault();
+            });
+		}
+		else if(i!=j){
+		$(".error").html('<div class="alert alert-danger" role="alert"><b>Passwords don\'t match</b></div>');
+			$("#form").submit(function(e){
+                e.preventDefault();
+            });
+		}
+		else{
+		$('#form').unbind('submit');
+		$(".error").css("opacity","0");
+		}
+		}
+	</script>
+	
+</body>
+</html>

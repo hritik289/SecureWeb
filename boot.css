@@ -1,0 +1,51 @@
+.card{
+  transition: 0.3s;
+  margin: 10px;
+  padding:10px;
+  
+}
+.jumbotron{
+  background:blanchedalmond;
+  font-weight:bolder;
+}
+.jumbotron h1 {
+  font-weight: 200;
+  color:white;
+}
+.jumbotron p {
+  color:white;
+}
+
+.jumbotron h3 {
+  color:black;
+}
+.navbar-brand{
+  
+  color:black;
+}
+.nav-link{
+  font-size:20px;
+}
+.page-footer{
+  background:blanchedalmond;
+  color:black;
+}
+.team{
+  margin-left:0;
+}
+.team h3{
+  margin-left:0;
+  font-family: cursive;
+  font-weight: bold;
+}
+.jumbotron lead buttonSignUp{
+color:red;
+font-size: 100px;
+}
+.container:hover{
+  box-shadow: 500px 500px 500px 500px black;
+} 
+ .container buynow{
+  overflow: hidden;
+  background-color:black;
+}
