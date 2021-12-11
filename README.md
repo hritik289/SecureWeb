@@ -13,3 +13,5 @@ Inside this database go to the option of import and import the file named "secur
 Now open "localhost/`foldername`/home.php"
 
 Surf the website 
+
+![alt text](https://github.com/hritik289/SecureWeb/images/image.jpg?raw=true)
