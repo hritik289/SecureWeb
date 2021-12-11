@@ -14,4 +14,4 @@ Now open "localhost/`foldername`/home.php"
 
 Surf the website 
 
-![alt text](https://github.com/hritik289/SecureWeb/Images/image.jpg?raw=true)
+![alt text](https://github.com/hritik289/SecureWeb/blob/main/Images/image.jpg?raw=true)
